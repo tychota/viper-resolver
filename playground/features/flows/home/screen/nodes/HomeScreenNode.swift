@@ -10,7 +10,9 @@ class HomeScreenNode: ASDisplayNode {
     }()
     lazy var pageNameNode: ASTextNode2 = {
         let node = ASTextNode2()
-        let attributes = [NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .largeTitle)]
+        let attributes = [
+            NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .largeTitle)
+        ]
         node.attributedText = NSAttributedString(string: "Home", attributes: attributes)
         node.backgroundColor = .white
         return node
@@ -46,6 +48,12 @@ extension HomeScreenNode {
 }
 
 extension HomeScreenNode {
-    override func didLoad() { logoutButton.addTarget(self, action: #selector(logoutButtonPressed), forControlEvents: .touchUpInside) }
+    override func didLoad() {
+        logoutButton.addTarget(
+            self,
+            action: #selector(logoutButtonPressed),
+            forControlEvents: .touchUpInside
+        )
+    }
     @objc func logoutButtonPressed() { presenter.handleLogoutButtonPressed() }
 }

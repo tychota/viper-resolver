@@ -18,7 +18,9 @@ class MainRouter {
             rootViewController.present(targetViewController, animated: false, completion: nil)
         }
         else {
-            rootViewController.dismiss(animated: false) { rootViewController.present(targetViewController, animated: false, completion: nil) }
+            rootViewController.dismiss(animated: false) {
+                rootViewController.present(targetViewController, animated: false, completion: nil)
+            }
         }
     }
 }

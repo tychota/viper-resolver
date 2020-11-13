@@ -10,7 +10,9 @@ class Login2ScreenNode: ASDisplayNode {
     }()
     lazy var pageNameNode: ASTextNode2 = {
         let node = ASTextNode2()
-        let attributes = [NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .largeTitle)]
+        let attributes = [
+            NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .largeTitle)
+        ]
         node.attributedText = NSAttributedString(string: "Login2", attributes: attributes)
         node.backgroundColor = .white
         return node
@@ -46,6 +48,12 @@ extension Login2ScreenNode {
 }
 
 extension Login2ScreenNode {
-    override func didLoad() { homeButton.addTarget(self, action: #selector(homeButtonPressed), forControlEvents: .touchUpInside) }
+    override func didLoad() {
+        homeButton.addTarget(
+            self,
+            action: #selector(homeButtonPressed),
+            forControlEvents: .touchUpInside
+        )
+    }
     @objc func homeButtonPressed() { presenter.handleHomeButtonPressed() }
 }

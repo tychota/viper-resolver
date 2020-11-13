@@ -1,4 +1,6 @@
-protocol LoginNavigationInteractorOutput: class { func setWeak(presenter pres: LoginNavigationPresenterInput) }
+protocol LoginNavigationInteractorOutput: class {
+    func setWeak(presenter pres: LoginNavigationPresenterInput)
+}
 
 class LoginNavigationInteractor { weak var presenter: LoginNavigationPresenterInput! }
 

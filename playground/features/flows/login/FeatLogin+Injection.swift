@@ -18,7 +18,8 @@ extension Resolver {
         register { LoginNavigationViewController() }.resolveProperties { (_, viewController) in
             viewController.presenter.setWeak(viewController: viewController)
         }.scope(shared)
-        register { LoginNavigationPresenter() }.resolveProperties { _, presenter in presenter.router.setWeak(presenter: presenter)
+        register { LoginNavigationPresenter() }.resolveProperties { _, presenter in
+            presenter.router.setWeak(presenter: presenter)
             presenter.interactor.setWeak(presenter: presenter)
         }.scope(shared)
         register { LoginNavigationInteractor() }.scope(shared)
@@ -36,7 +37,8 @@ extension Resolver {
         register { Login1ViewController() }.resolveProperties { (_, viewController) in
             viewController.presenter.setWeak(viewController: viewController)
         }.scope(shared)
-        register { Login1Presenter() }.resolveProperties { _, presenter in presenter.router.setWeak(presenter: presenter)
+        register { Login1Presenter() }.resolveProperties { _, presenter in
+            presenter.router.setWeak(presenter: presenter)
             presenter.interactor.setWeak(presenter: presenter)
         }.scope(shared)
         register { Login1Interactor() }.scope(shared)
@@ -54,7 +56,8 @@ extension Resolver {
         register { Login2ViewController() }.resolveProperties { (_, viewController) in
             viewController.presenter.setWeak(viewController: viewController)
         }.scope(shared)
-        register { Login2Presenter() }.resolveProperties { _, presenter in presenter.router.setWeak(presenter: presenter)
+        register { Login2Presenter() }.resolveProperties { _, presenter in
+            presenter.router.setWeak(presenter: presenter)
             presenter.interactor.setWeak(presenter: presenter)
         }.scope(shared)
         register { Login2Interactor() }.scope(shared)

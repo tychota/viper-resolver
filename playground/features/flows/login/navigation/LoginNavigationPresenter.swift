@@ -4,7 +4,9 @@ protocol LoginNavigationPresenterOutput: class {
     func setWeak(viewController vc: LoginNavigationViewControllerInput)
     func handleViewDidAppear()
 }
-protocol LoginNavigationPresenterInput: class { var viewController: LoginNavigationViewControllerInput? { get } }
+protocol LoginNavigationPresenterInput: class {
+    var viewController: LoginNavigationViewControllerInput? { get }
+}
 
 class LoginNavigationPresenter: LoginNavigationPresenterInput {
     @Injected var router: LoginNavigationRouterOutput

@@ -1,7 +1,9 @@
 import AsyncDisplayKit
 import Resolver
 
-protocol LoginNavigationViewControllerInput: class { func navigate(viewController: UIViewController) }
+protocol LoginNavigationViewControllerInput: class {
+    func navigate(viewController: UIViewController)
+}
 
 class LoginNavigationViewController: ASNavigationController {
     @Injected var presenter: LoginNavigationPresenterOutput
@@ -9,5 +11,7 @@ class LoginNavigationViewController: ASNavigationController {
 }
 
 extension LoginNavigationViewController: LoginNavigationViewControllerInput {
-    func navigate(viewController: UIViewController) { self.pushViewController(viewController, animated: true) }
+    func navigate(viewController: UIViewController) {
+        self.pushViewController(viewController, animated: true)
+    }
 }
