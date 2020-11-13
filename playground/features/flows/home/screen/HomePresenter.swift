@@ -1,6 +1,9 @@
 import Resolver
 
-protocol HomePresenterOutput: class { func setWeak(viewController vc: HomeViewControllerInput) }
+protocol HomePresenterOutput: class {
+    func setWeak(viewController vc: HomeViewControllerInput)
+    func handleLogoutButtonPressed()
+}
 protocol HomePresenterInput: class { var viewController: HomeViewControllerInput? { get } }
 
 class HomePresenter: HomePresenterInput {
@@ -9,4 +12,7 @@ class HomePresenter: HomePresenterInput {
     weak var viewController: HomeViewControllerInput?
 }
 
-extension HomePresenter: HomePresenterOutput { func setWeak(viewController vc: HomeViewControllerInput) { viewController = vc } }
+extension HomePresenter: HomePresenterOutput {
+    func setWeak(viewController vc: HomeViewControllerInput) { viewController = vc }
+    func handleLogoutButtonPressed() { router.logout() }
+}
