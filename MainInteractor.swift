@@ -1,5 +1,8 @@
-protocol MainInteractorOutput: class {}
+protocol MainInteractorOutput: class {
+}
 
-class MainInteractor: MainInteractorOutput {
+class MainInteractor {
     weak var presenter: MainPresenterInput!
 }
+
+extension MainInteractor: MainInteractorOutput {}

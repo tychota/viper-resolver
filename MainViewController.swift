@@ -1,9 +1,7 @@
 import Resolver
 import AsyncDisplayKit
 
-protocol MainViewControllerInput: class {
-    
-}
+protocol MainViewControllerInput: UIViewController {}
 
 class MainViewController: ASDKViewController<ASDisplayNode>, MainViewControllerInput {
     @Injected var presenter: MainPresenterOutput
@@ -16,4 +14,5 @@ class MainViewController: ASDKViewController<ASDisplayNode>, MainViewControllerI
     required init?(coder _: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+
 }

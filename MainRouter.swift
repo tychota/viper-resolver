@@ -1,5 +1,10 @@
+import Resolver
+import UIKit
+
 protocol MainRouterOutput: class {}
 
-class MainRouter: MainRouterOutput {
+class MainRouter {
     weak var presenter: MainPresenterInput!
 }
+    
+extension MainRouter: MainRouterOutput {}
