@@ -1,11 +1,11 @@
 import Resolver
 import AsyncDisplayKit
 
-protocol ViewInput: class {
+protocol MainViewControllerInput: class {
     
 }
 
-class MainViewController: ASDKViewController<ASDisplayNode>, ViewInput {
+class MainViewController: ASDKViewController<ASDisplayNode>, MainViewControllerInput {
     @Injected var presenter: MainPresenterOutput
     
     override init() {
