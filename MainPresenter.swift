@@ -2,6 +2,7 @@ import Resolver
 
 protocol MainPresenterOutput: class {
     func setWeak(viewController vc: MainViewControllerInput)
+    func handleDidAppear()
 }
 
 protocol MainPresenterInput: class {
@@ -18,5 +19,9 @@ class MainPresenter: MainPresenterInput {
 extension MainPresenter: MainPresenterOutput {
     func setWeak(viewController vc: MainViewControllerInput) {
         viewController = vc
+    }
+    
+    func handleDidAppear() {
+        router.presentLogin()
     }
 }
