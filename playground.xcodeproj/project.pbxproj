@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		0A38549F367C941B39F80C11 /* Pods_playgroundTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 285A704ECAE37E784081DE03 /* Pods_playgroundTests.framework */; };
 		3C75A5A82949401879431148 /* Pods_playground.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B30C9DA0178CE73B042AE96C /* Pods_playground.framework */; };
+		85FC3D12255ECF8E00E2C8A7 /* FeatHome+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FC3D11255ECF8E00E2C8A7 /* FeatHome+Injection.swift */; };
+		85FC3D17255ECF9600E2C8A7 /* FeatHomeModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FC3D16255ECF9600E2C8A7 /* FeatHomeModule.swift */; };
+		85FC3D23255ECFA800E2C8A7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FC3D22255ECFA800E2C8A7 /* HomeViewController.swift */; };
+		85FC3D29255ECFC900E2C8A7 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FC3D28255ECFC900E2C8A7 /* HomePresenter.swift */; };
+		85FC3D31255ECFD000E2C8A7 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FC3D30255ECFD000E2C8A7 /* HomeInteractor.swift */; };
+		85FC3D36255ECFD500E2C8A7 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FC3D35255ECFD500E2C8A7 /* HomeRouter.swift */; };
 		A46D3132D273AA28D7B2B86A /* Pods_playground_playgroundUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87B0687B55A7F03935B1106D /* Pods_playground_playgroundUITests.framework */; };
 		F70AB484255EBD5D00C62D7D /* FeatRoot+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70AB483255EBD5D00C62D7D /* FeatRoot+Injection.swift */; };
 		F70AB48E255EBDAE00C62D7D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70AB48D255EBDAE00C62D7D /* MainViewController.swift */; };
@@ -51,6 +57,12 @@
 /* Begin PBXFileReference section */
 		0C10238B2105FBDA38E86DC9 /* Pods-playgroundTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-playgroundTests.debug.xcconfig"; path = "Target Support Files/Pods-playgroundTests/Pods-playgroundTests.debug.xcconfig"; sourceTree = "<group>"; };
 		285A704ECAE37E784081DE03 /* Pods_playgroundTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_playgroundTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		85FC3D11255ECF8E00E2C8A7 /* FeatHome+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeatHome+Injection.swift"; sourceTree = "<group>"; };
+		85FC3D16255ECF9600E2C8A7 /* FeatHomeModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatHomeModule.swift; sourceTree = "<group>"; };
+		85FC3D22255ECFA800E2C8A7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		85FC3D28255ECFC900E2C8A7 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		85FC3D30255ECFD000E2C8A7 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		85FC3D35255ECFD500E2C8A7 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		87B0687B55A7F03935B1106D /* Pods_playground_playgroundUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_playground_playgroundUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A943B89816610B60713B5DA /* Pods-playground-playgroundUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-playground-playgroundUITests.debug.xcconfig"; path = "Target Support Files/Pods-playground-playgroundUITests/Pods-playground-playgroundUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		96B41E3D196A86E7315873CC /* Pods-playgroundTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-playgroundTests.release.xcconfig"; path = "Target Support Files/Pods-playgroundTests/Pods-playgroundTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -121,6 +133,35 @@
 				285A704ECAE37E784081DE03 /* Pods_playgroundTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		85FC3D04255ECF7100E2C8A7 /* featHome */ = {
+			isa = PBXGroup;
+			children = (
+				85FC3D1E255ECF9F00E2C8A7 /* screens */,
+				85FC3D16255ECF9600E2C8A7 /* FeatHomeModule.swift */,
+				85FC3D11255ECF8E00E2C8A7 /* FeatHome+Injection.swift */,
+			);
+			name = featHome;
+			sourceTree = "<group>";
+		};
+		85FC3D1E255ECF9F00E2C8A7 /* screens */ = {
+			isa = PBXGroup;
+			children = (
+				85FC3D27255ECFAF00E2C8A7 /* home */,
+			);
+			name = screens;
+			sourceTree = "<group>";
+		};
+		85FC3D27255ECFAF00E2C8A7 /* home */ = {
+			isa = PBXGroup;
+			children = (
+				85FC3D22255ECFA800E2C8A7 /* HomeViewController.swift */,
+				85FC3D28255ECFC900E2C8A7 /* HomePresenter.swift */,
+				85FC3D30255ECFD000E2C8A7 /* HomeInteractor.swift */,
+				85FC3D35255ECFD500E2C8A7 /* HomeRouter.swift */,
+			);
+			name = home;
 			sourceTree = "<group>";
 		};
 		9013D0BC8609AD800B7F0431 /* Pods */ = {
@@ -222,6 +263,7 @@
 			children = (
 				F70AB4C4255ECEE100C62D7D /* featLogin */,
 				F70AB482255EBD0E00C62D7D /* featRoot */,
+				85FC3D04255ECF7100E2C8A7 /* featHome */,
 				F7E1864E255E8EDC00609B0D /* AppDelegate.swift */,
 				F7E18650255E8EDC00609B0D /* SceneDelegate.swift */,
 				F7E18657255E8EDE00609B0D /* Assets.xcassets */,
@@ -490,17 +532,23 @@
 				F70AB4C6255ECF3D00C62D7D /* FeatLoginModule.swift in Sources */,
 				F70AB4CB255ECF6D00C62D7D /* FeatLogin+Injection.swift in Sources */,
 				F70AB48E255EBDAE00C62D7D /* MainViewController.swift in Sources */,
+				85FC3D17255ECF9600E2C8A7 /* FeatHomeModule.swift in Sources */,
 				F7E1864F255E8EDC00609B0D /* AppDelegate.swift in Sources */,
 				F70AB4E1255ED0A400C62D7D /* Login1Router.swift in Sources */,
+				85FC3D36255ECFD500E2C8A7 /* HomeRouter.swift in Sources */,
 				F70AB4A4255EC19100C62D7D /* Injection.swift in Sources */,
 				F70AB4D2255ECFD200C62D7D /* Login1ViewController.swift in Sources */,
 				F7E18651255E8EDC00609B0D /* SceneDelegate.swift in Sources */,
 				F70AB4D7255ED04500C62D7D /* Login1Presenter.swift in Sources */,
 				F70AB4B3255EC65800C62D7D /* MainPresenter.swift in Sources */,
 				F70AB4DC255ED08100C62D7D /* Login1Interactor.swift in Sources */,
+				85FC3D12255ECF8E00E2C8A7 /* FeatHome+Injection.swift in Sources */,
 				F70AB496255EBF6C00C62D7D /* FeatRootModule.swift in Sources */,
+				85FC3D29255ECFC900E2C8A7 /* HomePresenter.swift in Sources */,
 				F70AB4B8255EC66B00C62D7D /* MainInteractor.swift in Sources */,
 				F70AB4BD255EC67D00C62D7D /* MainRouter.swift in Sources */,
+				85FC3D23255ECFA800E2C8A7 /* HomeViewController.swift in Sources */,
+				85FC3D31255ECFD000E2C8A7 /* HomeInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
