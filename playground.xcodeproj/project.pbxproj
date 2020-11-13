@@ -17,6 +17,12 @@
 		F70AB4B3255EC65800C62D7D /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70AB4B2255EC65800C62D7D /* MainPresenter.swift */; };
 		F70AB4B8255EC66B00C62D7D /* MainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70AB4B7255EC66B00C62D7D /* MainInteractor.swift */; };
 		F70AB4BD255EC67D00C62D7D /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70AB4BC255EC67D00C62D7D /* MainRouter.swift */; };
+		F70AB4C6255ECF3D00C62D7D /* FeatLoginModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70AB4C5255ECF3D00C62D7D /* FeatLoginModule.swift */; };
+		F70AB4CB255ECF6D00C62D7D /* FeatLogin+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70AB4CA255ECF6D00C62D7D /* FeatLogin+Injection.swift */; };
+		F70AB4D2255ECFD200C62D7D /* Login1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70AB4D1255ECFD200C62D7D /* Login1ViewController.swift */; };
+		F70AB4D7255ED04500C62D7D /* Login1Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70AB4D6255ED04500C62D7D /* Login1Presenter.swift */; };
+		F70AB4DC255ED08100C62D7D /* Login1Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70AB4DB255ED08100C62D7D /* Login1Interactor.swift */; };
+		F70AB4E1255ED0A400C62D7D /* Login1Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70AB4E0255ED0A400C62D7D /* Login1Router.swift */; };
 		F7E1864F255E8EDC00609B0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E1864E255E8EDC00609B0D /* AppDelegate.swift */; };
 		F7E18651255E8EDC00609B0D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E18650255E8EDC00609B0D /* SceneDelegate.swift */; };
 		F7E18658255E8EDE00609B0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7E18657255E8EDE00609B0D /* Assets.xcassets */; };
@@ -59,6 +65,12 @@
 		F70AB4B2255EC65800C62D7D /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 		F70AB4B7255EC66B00C62D7D /* MainInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInteractor.swift; sourceTree = "<group>"; };
 		F70AB4BC255EC67D00C62D7D /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
+		F70AB4C5255ECF3D00C62D7D /* FeatLoginModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatLoginModule.swift; sourceTree = "<group>"; };
+		F70AB4CA255ECF6D00C62D7D /* FeatLogin+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeatLogin+Injection.swift"; sourceTree = "<group>"; };
+		F70AB4D1255ECFD200C62D7D /* Login1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login1ViewController.swift; sourceTree = "<group>"; };
+		F70AB4D6255ED04500C62D7D /* Login1Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login1Presenter.swift; sourceTree = "<group>"; };
+		F70AB4DB255ED08100C62D7D /* Login1Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login1Interactor.swift; sourceTree = "<group>"; };
+		F70AB4E0255ED0A400C62D7D /* Login1Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login1Router.swift; sourceTree = "<group>"; };
 		F7E1864B255E8EDC00609B0D /* playground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = playground.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7E1864E255E8EDC00609B0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F7E18650255E8EDC00609B0D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -156,8 +168,30 @@
 		F70AB4C4255ECEE100C62D7D /* featLogin */ = {
 			isa = PBXGroup;
 			children = (
+				F70AB4CF255ECFA400C62D7D /* screens */,
+				F70AB4C5255ECF3D00C62D7D /* FeatLoginModule.swift */,
+				F70AB4CA255ECF6D00C62D7D /* FeatLogin+Injection.swift */,
 			);
 			name = featLogin;
+			sourceTree = "<group>";
+		};
+		F70AB4CF255ECFA400C62D7D /* screens */ = {
+			isa = PBXGroup;
+			children = (
+				F70AB4D0255ECFB200C62D7D /* login1 */,
+			);
+			name = screens;
+			sourceTree = "<group>";
+		};
+		F70AB4D0255ECFB200C62D7D /* login1 */ = {
+			isa = PBXGroup;
+			children = (
+				F70AB4D1255ECFD200C62D7D /* Login1ViewController.swift */,
+				F70AB4D6255ED04500C62D7D /* Login1Presenter.swift */,
+				F70AB4DB255ED08100C62D7D /* Login1Interactor.swift */,
+				F70AB4E0255ED0A400C62D7D /* Login1Router.swift */,
+			);
+			name = login1;
 			sourceTree = "<group>";
 		};
 		F7E18642255E8EDC00609B0D = {
@@ -453,11 +487,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				F70AB484255EBD5D00C62D7D /* FeatRoot+Injection.swift in Sources */,
+				F70AB4C6255ECF3D00C62D7D /* FeatLoginModule.swift in Sources */,
+				F70AB4CB255ECF6D00C62D7D /* FeatLogin+Injection.swift in Sources */,
 				F70AB48E255EBDAE00C62D7D /* MainViewController.swift in Sources */,
 				F7E1864F255E8EDC00609B0D /* AppDelegate.swift in Sources */,
+				F70AB4E1255ED0A400C62D7D /* Login1Router.swift in Sources */,
 				F70AB4A4255EC19100C62D7D /* Injection.swift in Sources */,
+				F70AB4D2255ECFD200C62D7D /* Login1ViewController.swift in Sources */,
 				F7E18651255E8EDC00609B0D /* SceneDelegate.swift in Sources */,
+				F70AB4D7255ED04500C62D7D /* Login1Presenter.swift in Sources */,
 				F70AB4B3255EC65800C62D7D /* MainPresenter.swift in Sources */,
+				F70AB4DC255ED08100C62D7D /* Login1Interactor.swift in Sources */,
 				F70AB496255EBF6C00C62D7D /* FeatRootModule.swift in Sources */,
 				F70AB4B8255EC66B00C62D7D /* MainInteractor.swift in Sources */,
 				F70AB4BD255EC67D00C62D7D /* MainRouter.swift in Sources */,
