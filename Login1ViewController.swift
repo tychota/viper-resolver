@@ -3,9 +3,7 @@ import Foundation
 import Resolver
 import AsyncDisplayKit
 
-protocol Login1ViewControllerInput: class {
-    
-}
+protocol Login1ViewControllerInput: UIViewController {}
 
 class Login1ViewController: ASDKViewController<ASDisplayNode>, Login1ViewControllerInput {
     @Injected var presenter: Login1PresenterOutput
