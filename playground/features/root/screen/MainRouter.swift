@@ -25,7 +25,7 @@ class MainRouter {
 extension MainRouter: MainRouterOutput {
     func setWeak(presenter pres: MainPresenterInput) { presenter = pres }
     func presentLogin() {
-        let viewController = Resolver.resolve(Login1ViewController.self)
+        let viewController = Resolver.resolve(LoginNavigationViewController.self)
         present(viewController: viewController)
     }
     func presentHome() {

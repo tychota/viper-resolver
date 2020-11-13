@@ -2,10 +2,29 @@ import Resolver
 
 extension Resolver {
     public static func registerFeatLogin() {
+        registerLoginNavigation()
         registerLogin1()
+        registerLogin2()
     }
 }
 
+extension Resolver {
+    fileprivate static func registerLoginNavigation() {
+        // VIPER protocol
+        register { resolve() as LoginNavigationPresenter as LoginNavigationPresenterOutput }
+        register { resolve() as LoginNavigationInteractor as LoginNavigationInteractorOutput }
+        register { resolve() as LoginNavigationRouter as LoginNavigationRouterOutput }
+        // VIPER concrete class
+        register { LoginNavigationViewController() }.resolveProperties { (_, viewController) in
+            viewController.presenter.setWeak(viewController: viewController)
+        }
+        register { LoginNavigationPresenter() }.resolveProperties { _, presenter in presenter.router.setWeak(presenter: presenter)
+            presenter.interactor.setWeak(presenter: presenter)
+        }
+        register { LoginNavigationInteractor() }
+        register { LoginNavigationRouter() }
+    }
+}
 
 extension Resolver {
     fileprivate static func registerLogin1() {

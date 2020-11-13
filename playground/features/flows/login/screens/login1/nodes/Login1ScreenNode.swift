@@ -17,7 +17,7 @@ class Login1ScreenNode: ASDisplayNode {
     }()
     lazy var homeButton: ASButtonNode = {
         let node = ASButtonNode()
-        node.setTitle("Go To Home", with: nil, with: .blue, for: .normal)
+        node.setTitle("Next", with: nil, with: .blue, for: .normal)
         node.backgroundColor = .white
         return node
     }()
