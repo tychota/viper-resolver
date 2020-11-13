@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		0A38549F367C941B39F80C11 /* Pods_playgroundTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 285A704ECAE37E784081DE03 /* Pods_playgroundTests.framework */; };
 		3C75A5A82949401879431148 /* Pods_playground.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B30C9DA0178CE73B042AE96C /* Pods_playground.framework */; };
-		85FC3D12255ECF8E00E2C8A7 /* FeatHome+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FC3D11255ECF8E00E2C8A7 /* FeatHome+Injection.swift */; };
 		85FC3D23255ECFA800E2C8A7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FC3D22255ECFA800E2C8A7 /* HomeViewController.swift */; };
 		85FC3D29255ECFC900E2C8A7 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FC3D28255ECFC900E2C8A7 /* HomePresenter.swift */; };
 		85FC3D31255ECFD000E2C8A7 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FC3D30255ECFD000E2C8A7 /* HomeInteractor.swift */; };
@@ -27,6 +26,7 @@
 		F70AB4DC255ED08100C62D7D /* Login1Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70AB4DB255ED08100C62D7D /* Login1Interactor.swift */; };
 		F70AB4E1255ED0A400C62D7D /* Login1Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70AB4E0255ED0A400C62D7D /* Login1Router.swift */; };
 		F70AB526255EF40E00C62D7D /* Login1ScreenNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70AB525255EF40E00C62D7D /* Login1ScreenNode.swift */; };
+		F70AB54A255F042400C62D7D /* FeatHome+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70AB549255F042400C62D7D /* FeatHome+Injection.swift */; };
 		F7E1864F255E8EDC00609B0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E1864E255E8EDC00609B0D /* AppDelegate.swift */; };
 		F7E18651255E8EDC00609B0D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E18650255E8EDC00609B0D /* SceneDelegate.swift */; };
 		F7E18658255E8EDE00609B0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7E18657255E8EDE00609B0D /* Assets.xcassets */; };
@@ -55,7 +55,6 @@
 /* Begin PBXFileReference section */
 		0C10238B2105FBDA38E86DC9 /* Pods-playgroundTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-playgroundTests.debug.xcconfig"; path = "Target Support Files/Pods-playgroundTests/Pods-playgroundTests.debug.xcconfig"; sourceTree = "<group>"; };
 		285A704ECAE37E784081DE03 /* Pods_playgroundTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_playgroundTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		85FC3D11255ECF8E00E2C8A7 /* FeatHome+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeatHome+Injection.swift"; sourceTree = "<group>"; };
 		85FC3D22255ECFA800E2C8A7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		85FC3D28255ECFC900E2C8A7 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		85FC3D30255ECFD000E2C8A7 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
@@ -67,7 +66,7 @@
 		B30C9DA0178CE73B042AE96C /* Pods_playground.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_playground.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6F11B3750C5A2F781771BD5 /* Pods-playground.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-playground.debug.xcconfig"; path = "Target Support Files/Pods-playground/Pods-playground.debug.xcconfig"; sourceTree = "<group>"; };
 		CF859F804F82CB4C7EF9AE8E /* Pods-playground-playgroundUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-playground-playgroundUITests.release.xcconfig"; path = "Target Support Files/Pods-playground-playgroundUITests/Pods-playground-playgroundUITests.release.xcconfig"; sourceTree = "<group>"; };
-		F70AB483255EBD5D00C62D7D /* FeatRoot+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeatRoot+Injection.swift"; sourceTree = "<group>"; };
+		F70AB483255EBD5D00C62D7D /* FeatRoot+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "FeatRoot+Injection.swift"; path = "features/root/FeatRoot+Injection.swift"; sourceTree = "<group>"; };
 		F70AB48D255EBDAE00C62D7D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		F70AB4A3255EC19100C62D7D /* Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injection.swift; sourceTree = "<group>"; };
 		F70AB4B2255EC65800C62D7D /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
@@ -79,6 +78,7 @@
 		F70AB4DB255ED08100C62D7D /* Login1Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login1Interactor.swift; sourceTree = "<group>"; };
 		F70AB4E0255ED0A400C62D7D /* Login1Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login1Router.swift; sourceTree = "<group>"; };
 		F70AB525255EF40E00C62D7D /* Login1ScreenNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login1ScreenNode.swift; sourceTree = "<group>"; };
+		F70AB549255F042400C62D7D /* FeatHome+Injection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FeatHome+Injection.swift"; sourceTree = "<group>"; };
 		F7E1864B255E8EDC00609B0D /* playground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = playground.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7E1864E255E8EDC00609B0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F7E18650255E8EDC00609B0D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -131,34 +131,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		85FC3D04255ECF7100E2C8A7 /* featHome */ = {
-			isa = PBXGroup;
-			children = (
-				85FC3D1E255ECF9F00E2C8A7 /* screens */,
-				85FC3D11255ECF8E00E2C8A7 /* FeatHome+Injection.swift */,
-			);
-			name = featHome;
-			sourceTree = "<group>";
-		};
-		85FC3D1E255ECF9F00E2C8A7 /* screens */ = {
-			isa = PBXGroup;
-			children = (
-				85FC3D27255ECFAF00E2C8A7 /* home */,
-			);
-			name = screens;
-			sourceTree = "<group>";
-		};
-		85FC3D27255ECFAF00E2C8A7 /* home */ = {
-			isa = PBXGroup;
-			children = (
-				85FC3D22255ECFA800E2C8A7 /* HomeViewController.swift */,
-				85FC3D28255ECFC900E2C8A7 /* HomePresenter.swift */,
-				85FC3D30255ECFD000E2C8A7 /* HomeInteractor.swift */,
-				85FC3D35255ECFD500E2C8A7 /* HomeRouter.swift */,
-			);
-			name = home;
-			sourceTree = "<group>";
-		};
 		9013D0BC8609AD800B7F0431 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -172,24 +144,17 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		F70AB482255EBD0E00C62D7D /* featRoot */ = {
+		F70AB482255EBD0E00C62D7D /* root */ = {
 			isa = PBXGroup;
 			children = (
-				F70AB48B255EBD7D00C62D7D /* screens */,
+				F70AB48B255EBD7D00C62D7D /* screen */,
 				F70AB483255EBD5D00C62D7D /* FeatRoot+Injection.swift */,
 			);
-			name = featRoot;
+			name = root;
+			path = ..;
 			sourceTree = "<group>";
 		};
-		F70AB48B255EBD7D00C62D7D /* screens */ = {
-			isa = PBXGroup;
-			children = (
-				F70AB48C255EBD8900C62D7D /* main */,
-			);
-			name = screens;
-			sourceTree = "<group>";
-		};
-		F70AB48C255EBD8900C62D7D /* main */ = {
+		F70AB48B255EBD7D00C62D7D /* screen */ = {
 			isa = PBXGroup;
 			children = (
 				F70AB48D255EBDAE00C62D7D /* MainViewController.swift */,
@@ -197,44 +162,100 @@
 				F70AB4B7255EC66B00C62D7D /* MainInteractor.swift */,
 				F70AB4BC255EC67D00C62D7D /* MainRouter.swift */,
 			);
-			name = main;
+			name = screen;
+			path = features/root/screen;
 			sourceTree = "<group>";
 		};
-		F70AB4C4255ECEE100C62D7D /* featLogin */ = {
+		F70AB530255F006A00C62D7D /* application */ = {
 			isa = PBXGroup;
 			children = (
-				F70AB4CF255ECFA400C62D7D /* screens */,
+				F7E1864E255E8EDC00609B0D /* AppDelegate.swift */,
+				F7E18650255E8EDC00609B0D /* SceneDelegate.swift */,
+			);
+			path = application;
+			sourceTree = "<group>";
+		};
+		F70AB531255F00FE00C62D7D /* features */ = {
+			isa = PBXGroup;
+			children = (
+				F70AB482255EBD0E00C62D7D /* root */,
+				F70AB532255F01D000C62D7D /* flows */,
+			);
+			path = features;
+			sourceTree = "<group>";
+		};
+		F70AB532255F01D000C62D7D /* flows */ = {
+			isa = PBXGroup;
+			children = (
+				F70AB533255F01F100C62D7D /* login */,
+				F70AB538255F031900C62D7D /* home */,
+			);
+			path = flows;
+			sourceTree = "<group>";
+		};
+		F70AB533255F01F100C62D7D /* login */ = {
+			isa = PBXGroup;
+			children = (
+				F70AB534255F023800C62D7D /* navigation */,
+				F70AB535255F024300C62D7D /* screens */,
 				F70AB4CA255ECF6D00C62D7D /* FeatLogin+Injection.swift */,
 			);
-			name = featLogin;
+			path = login;
 			sourceTree = "<group>";
 		};
-		F70AB4CF255ECFA400C62D7D /* screens */ = {
+		F70AB534255F023800C62D7D /* navigation */ = {
 			isa = PBXGroup;
 			children = (
-				F70AB4D0255ECFB200C62D7D /* login1 */,
 			);
-			name = screens;
+			path = navigation;
 			sourceTree = "<group>";
 		};
-		F70AB4D0255ECFB200C62D7D /* login1 */ = {
+		F70AB535255F024300C62D7D /* screens */ = {
 			isa = PBXGroup;
 			children = (
-				F70AB523255EF3AC00C62D7D /* nodes */,
+				F70AB536255F024D00C62D7D /* login1 */,
+			);
+			path = screens;
+			sourceTree = "<group>";
+		};
+		F70AB536255F024D00C62D7D /* login1 */ = {
+			isa = PBXGroup;
+			children = (
+				F70AB537255F02A600C62D7D /* nodes */,
 				F70AB4D1255ECFD200C62D7D /* Login1ViewController.swift */,
 				F70AB4D6255ED04500C62D7D /* Login1Presenter.swift */,
 				F70AB4DB255ED08100C62D7D /* Login1Interactor.swift */,
 				F70AB4E0255ED0A400C62D7D /* Login1Router.swift */,
 			);
-			name = login1;
+			path = login1;
 			sourceTree = "<group>";
 		};
-		F70AB523255EF3AC00C62D7D /* nodes */ = {
+		F70AB537255F02A600C62D7D /* nodes */ = {
 			isa = PBXGroup;
 			children = (
 				F70AB525255EF40E00C62D7D /* Login1ScreenNode.swift */,
 			);
-			name = nodes;
+			path = nodes;
+			sourceTree = "<group>";
+		};
+		F70AB538255F031900C62D7D /* home */ = {
+			isa = PBXGroup;
+			children = (
+				F70AB539255F032200C62D7D /* screen */,
+				F70AB549255F042400C62D7D /* FeatHome+Injection.swift */,
+			);
+			path = home;
+			sourceTree = "<group>";
+		};
+		F70AB539255F032200C62D7D /* screen */ = {
+			isa = PBXGroup;
+			children = (
+				85FC3D22255ECFA800E2C8A7 /* HomeViewController.swift */,
+				85FC3D28255ECFC900E2C8A7 /* HomePresenter.swift */,
+				85FC3D30255ECFD000E2C8A7 /* HomeInteractor.swift */,
+				85FC3D35255ECFD500E2C8A7 /* HomeRouter.swift */,
+			);
+			path = screen;
 			sourceTree = "<group>";
 		};
 		F7E18642255E8EDC00609B0D = {
@@ -262,17 +283,14 @@
 		F7E1864D255E8EDC00609B0D /* playground */ = {
 			isa = PBXGroup;
 			children = (
-				F70AB482255EBD0E00C62D7D /* featRoot */,
-				F70AB4C4255ECEE100C62D7D /* featLogin */,
-				85FC3D04255ECF7100E2C8A7 /* featHome */,
-				F7E1864E255E8EDC00609B0D /* AppDelegate.swift */,
-				F7E18650255E8EDC00609B0D /* SceneDelegate.swift */,
-				F70AB4A3255EC19100C62D7D /* Injection.swift */,
-				F7E18657255E8EDE00609B0D /* Assets.xcassets */,
 				F7E18659255E8EDE00609B0D /* LaunchScreen.storyboard */,
+				F7E18657255E8EDE00609B0D /* Assets.xcassets */,
 				F7E1865C255E8EDE00609B0D /* Info.plist */,
+				F70AB4A3255EC19100C62D7D /* Injection.swift */,
+				F70AB530255F006A00C62D7D /* application */,
+				F70AB531255F00FE00C62D7D /* features */,
 			);
-			name = playground;
+			path = playground;
 			sourceTree = "<group>";
 		};
 		F7E18664255E8EDE00609B0D /* playgroundTests */ = {
@@ -538,11 +556,11 @@
 				85FC3D36255ECFD500E2C8A7 /* HomeRouter.swift in Sources */,
 				F70AB4A4255EC19100C62D7D /* Injection.swift in Sources */,
 				F70AB4D2255ECFD200C62D7D /* Login1ViewController.swift in Sources */,
+				F70AB54A255F042400C62D7D /* FeatHome+Injection.swift in Sources */,
 				F7E18651255E8EDC00609B0D /* SceneDelegate.swift in Sources */,
 				F70AB4D7255ED04500C62D7D /* Login1Presenter.swift in Sources */,
 				F70AB4B3255EC65800C62D7D /* MainPresenter.swift in Sources */,
 				F70AB4DC255ED08100C62D7D /* Login1Interactor.swift in Sources */,
-				85FC3D12255ECF8E00E2C8A7 /* FeatHome+Injection.swift in Sources */,
 				85FC3D29255ECFC900E2C8A7 /* HomePresenter.swift in Sources */,
 				F70AB4B8255EC66B00C62D7D /* MainInteractor.swift in Sources */,
 				F70AB4BD255EC67D00C62D7D /* MainRouter.swift in Sources */,
@@ -718,7 +736,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_FILE = playground/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -737,7 +755,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_FILE = playground/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
