@@ -2,6 +2,13 @@ import Resolver
 
 extension Resolver {
     public static func registerFeatLogin() {
+        registerLogin1()
+    }
+}
+
+
+extension Resolver {
+    fileprivate static func registerLogin1() {
         // VIPER protocol
         register { resolve() as Login1Presenter as Login1PresenterOutput }
         register { resolve() as Login1Interactor as Login1InteractorOutput }
