@@ -1,14 +1,22 @@
 import Resolver
 
-protocol Login1PresenterOutput: class {}
+protocol Login1PresenterOutput: class {
+    func setWeak(viewController vc: Login1ViewControllerInput)
+}
 protocol Login1PresenterInput: class {
     var viewController: Login1ViewControllerInput? { get }
 }
 
-class Login1Presenter: Login1PresenterInput, Login1PresenterOutput {
+class Login1Presenter: Login1PresenterInput {
     
     @Injected var router: Login1RouterOutput
     @Injected var interactor: Login1InteractorOutput
     
     weak var viewController: Login1ViewControllerInput?
+}
+
+extension Login1Presenter: Login1PresenterOutput {
+    func setWeak(viewController vc: Login1ViewControllerInput) {
+        viewController = vc
+    }
 }

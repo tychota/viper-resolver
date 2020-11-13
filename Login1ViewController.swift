@@ -10,7 +10,7 @@ class Login1ViewController: ASDKViewController<ASDisplayNode>, Login1ViewControl
     
     override init() {
         super.init(node: ASDisplayNode())
-        view.backgroundColor = .red
+        view.backgroundColor = .blue
     }
     
     required init?(coder _: NSCoder) {
