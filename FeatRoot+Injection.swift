@@ -2,7 +2,6 @@ import Resolver
 
 extension Resolver {
     public static func registerFeatRoot() {
-        register { FeatRootModule() }
         // VIPER protocol
         register { resolve() as MainPresenter as MainPresenterOutput }
         register { resolve() as MainInteractor as MainInteractorOutput }
@@ -17,6 +16,5 @@ extension Resolver {
         }
         register { MainInteractor() }
         register { MainRouter() }
-        
     }
 }

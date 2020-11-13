@@ -13,7 +13,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.windowScene = windowScene
 
         
-        let viewController = Resolver.resolve(FeatRootModule.self).getPresentation()
+        let viewController = Resolver.resolve(MainViewController.self)
         window?.rootViewController = viewController
         
         window?.makeKeyAndVisible()
