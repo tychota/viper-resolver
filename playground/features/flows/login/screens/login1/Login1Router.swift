@@ -5,17 +5,12 @@ protocol Login1RouterOutput: class {
     func goToHome()
 }
 
-class Login1Router {
-    weak var presenter: Login1PresenterInput!
-}
+class Login1Router { weak var presenter: Login1PresenterInput! }
 
 extension Login1Router: Login1RouterOutput {
-    func setWeak(presenter pres: Login1PresenterInput) {
-        presenter = pres
-    }
+    func setWeak(presenter pres: Login1PresenterInput) { presenter = pres }
     func goToHome() {
         let rootRouter = Resolver.resolve(MainRouterOutput.self)
         rootRouter.presentHome()
     }
 }
-

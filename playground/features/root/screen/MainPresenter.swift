@@ -5,23 +5,15 @@ protocol MainPresenterOutput: class {
     func handleDidAppear()
 }
 
-protocol MainPresenterInput: class {
-    var viewController: MainViewControllerInput? { get }
-}
+protocol MainPresenterInput: class { var viewController: MainViewControllerInput? { get } }
 
 class MainPresenter: MainPresenterInput {
     @Injected var router: MainRouterOutput
     @Injected var interactor: MainInteractorOutput
-    
     weak var viewController: MainViewControllerInput?
 }
 
 extension MainPresenter: MainPresenterOutput {
-    func setWeak(viewController vc: MainViewControllerInput) {
-        viewController = vc
-    }
-    
-    func handleDidAppear() {
-        router.presentLogin()
-    }
+    func setWeak(viewController vc: MainViewControllerInput) { viewController = vc }
+    func handleDidAppear() { router.presentLogin() }
 }

@@ -10,8 +10,7 @@ extension Resolver {
         register { Login1ViewController() }.resolveProperties { (_, viewController) in
             viewController.presenter.setWeak(viewController: viewController)
         }
-        register { Login1Presenter() }.resolveProperties { _, presenter in
-            presenter.router.setWeak(presenter: presenter)
+        register { Login1Presenter() }.resolveProperties { _, presenter in presenter.router.setWeak(presenter: presenter)
             presenter.interactor.setWeak(presenter: presenter)
         }
         register { Login1Interactor() }

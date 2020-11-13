@@ -1,13 +1,5 @@
-protocol MainInteractorOutput: class {
-    func setWeak(presenter pres: MainPresenterInput)
-}
+protocol MainInteractorOutput: class { func setWeak(presenter pres: MainPresenterInput) }
 
-class MainInteractor  {
-    weak var presenter: MainPresenterInput!
-}
+class MainInteractor { weak var presenter: MainPresenterInput! }
 
-extension MainInteractor: MainInteractorOutput {
-    func setWeak(presenter pres: MainPresenterInput) {
-        presenter = pres
-    }
-}
+extension MainInteractor: MainInteractorOutput { func setWeak(presenter pres: MainPresenterInput) { presenter = pres } }

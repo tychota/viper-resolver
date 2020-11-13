@@ -1,19 +1,14 @@
-import Foundation
-
-import Resolver
 import AsyncDisplayKit
+import Foundation
+import Resolver
 
 protocol Login1ViewControllerInput: UIViewController {}
 
 class Login1ViewController: ASDKViewController<ASDisplayNode>, Login1ViewControllerInput {
     @Injected var presenter: Login1PresenterOutput
-    
     override init() {
         super.init(node: Login1ScreenNode())
         view.backgroundColor = .blue
     }
-    
-    required init?(coder _: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+    required init?(coder _: NSCoder) { fatalError("init(coder:) has not been implemented") }
 }
