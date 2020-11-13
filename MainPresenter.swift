@@ -1,6 +1,8 @@
 import Resolver
 
-protocol MainPresenterOutput: class {}
+protocol MainPresenterOutput: class {
+    func setWeak(viewController vc: MainViewControllerInput)
+}
 
 protocol MainPresenterInput: class {
     var viewController: MainViewControllerInput? { get }
@@ -14,4 +16,7 @@ class MainPresenter: MainPresenterInput {
 }
 
 extension MainPresenter: MainPresenterOutput {
+    func setWeak(viewController vc: MainViewControllerInput) {
+        viewController = vc
+    }
 }
