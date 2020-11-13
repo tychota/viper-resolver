@@ -1,10 +1,4 @@
-//
-//  SceneDelegate.swift
-//  playground
-//
-//  Created by Tycho Tatitscheff on 13/11/2020.
-//
-
+import Resolver
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
