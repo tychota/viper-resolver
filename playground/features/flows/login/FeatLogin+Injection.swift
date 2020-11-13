@@ -17,12 +17,12 @@ extension Resolver {
         // VIPER concrete class
         register { LoginNavigationViewController() }.resolveProperties { (_, viewController) in
             viewController.presenter.setWeak(viewController: viewController)
-        }
+        }.scope(shared)
         register { LoginNavigationPresenter() }.resolveProperties { _, presenter in presenter.router.setWeak(presenter: presenter)
             presenter.interactor.setWeak(presenter: presenter)
-        }
-        register { LoginNavigationInteractor() }
-        register { LoginNavigationRouter() }
+        }.scope(shared)
+        register { LoginNavigationInteractor() }.scope(shared)
+        register { LoginNavigationRouter() }.scope(shared)
     }
 }
 
@@ -35,12 +35,12 @@ extension Resolver {
         // VIPER concrete class
         register { Login1ViewController() }.resolveProperties { (_, viewController) in
             viewController.presenter.setWeak(viewController: viewController)
-        }
+        }.scope(shared)
         register { Login1Presenter() }.resolveProperties { _, presenter in presenter.router.setWeak(presenter: presenter)
             presenter.interactor.setWeak(presenter: presenter)
-        }
-        register { Login1Interactor() }
-        register { Login1Router() }
+        }.scope(shared)
+        register { Login1Interactor() }.scope(shared)
+        register { Login1Router() }.scope(shared)
     }
 }
 
@@ -53,11 +53,11 @@ extension Resolver {
         // VIPER concrete class
         register { Login2ViewController() }.resolveProperties { (_, viewController) in
             viewController.presenter.setWeak(viewController: viewController)
-        }
+        }.scope(shared)
         register { Login2Presenter() }.resolveProperties { _, presenter in presenter.router.setWeak(presenter: presenter)
             presenter.interactor.setWeak(presenter: presenter)
-        }
-        register { Login2Interactor() }
-        register { Login2Router() }
+        }.scope(shared)
+        register { Login2Interactor() }.scope(shared)
+        register { Login2Router() }.scope(shared)
     }
 }
