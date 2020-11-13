@@ -9,7 +9,7 @@ class Login1ViewController: ASDKViewController<ASDisplayNode>, Login1ViewControl
     @Injected var presenter: Login1PresenterOutput
     
     override init() {
-        super.init(node: ASDisplayNode())
+        super.init(node: Login1ScreenNode())
         view.backgroundColor = .blue
     }
     

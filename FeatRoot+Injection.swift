@@ -15,6 +15,6 @@ extension Resolver {
             presenter.interactor.setWeak(presenter: presenter)
         }
         register { MainInteractor() }
-        register { MainRouter() }
+        register { MainRouter() }.scope(application)
     }
 }

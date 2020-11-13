@@ -4,6 +4,7 @@ import UIKit
 protocol MainRouterOutput: class {
     func setWeak(presenter pres: MainPresenterInput)
     func presentLogin()
+    func presentHome()
 }
 
 class MainRouter {
@@ -34,6 +35,11 @@ extension MainRouter: MainRouterOutput {
     
     func presentLogin() {
         let viewController = Resolver.resolve(Login1ViewController.self)
+        present(viewController: viewController)
+    }
+    
+    func presentHome() {
+        let viewController = Resolver.resolve(HomeViewController.self)
         present(viewController: viewController)
     }
 }
