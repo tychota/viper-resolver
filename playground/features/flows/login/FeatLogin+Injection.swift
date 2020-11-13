@@ -24,3 +24,21 @@ extension Resolver {
         register { Login1Router() }
     }
 }
+
+extension Resolver {
+    fileprivate static func registerLogin2() {
+        // VIPER protocol
+        register { resolve() as Login2Presenter as Login2PresenterOutput }
+        register { resolve() as Login2Interactor as Login2InteractorOutput }
+        register { resolve() as Login2Router as Login2RouterOutput }
+        // VIPER concrete class
+        register { Login2ViewController() }.resolveProperties { (_, viewController) in
+            viewController.presenter.setWeak(viewController: viewController)
+        }
+        register { Login2Presenter() }.resolveProperties { _, presenter in presenter.router.setWeak(presenter: presenter)
+            presenter.interactor.setWeak(presenter: presenter)
+        }
+        register { Login2Interactor() }
+        register { Login2Router() }
+    }
+}
