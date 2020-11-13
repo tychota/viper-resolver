@@ -1,11 +1,9 @@
 import Resolver
 import AsyncDisplayKit
 
-protocol HomeViewInput: class {
-    
-}
+protocol HomeViewControllerInput: class {}
 
-class HomeViewController: ASDKViewController<ASDisplayNode>, HomeViewInput {
+class HomeViewController: ASDKViewController<ASDisplayNode>, HomeViewControllerInput {
     @Injected var presenter: HomePresenterOutput
     
     override init() {

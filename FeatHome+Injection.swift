@@ -2,11 +2,19 @@ import Resolver
 
 extension Resolver {
     public static func registerFeatHome() {
-        register { FeatHomeModule() }
-        // VIPER
-        register { HomeViewController() }
-        register { HomeInteractor() as HomeInteractorOutput }
-        register { HomePresenter() as HomePresenterOutput }
-        register { HomeRouter() as HomeRouterOutput }
+        // VIPER protocol
+        register { resolve() as HomePresenter as HomePresenterOutput }
+        register { resolve() as HomeInteractor as HomeInteractorOutput }
+        register { resolve() as HomeRouter as HomeRouterOutput }
+        // VIPER concrete class
+        register { HomeViewController() }.resolveProperties { (_, viewController) in
+            viewController.presenter.setWeak(viewController: viewController)
+        }
+        register { HomePresenter() }.resolveProperties { _, presenter in
+            presenter.router.setWeak(presenter: presenter)
+            presenter.interactor.setWeak(presenter: presenter)
+        }
+        register { HomeInteractor() }
+        register { HomeRouter() }
     }
 }
