@@ -127,6 +127,8 @@
 		F70AB482255EBD0E00C62D7D /* featRoot */ = {
 			isa = PBXGroup;
 			children = (
+				F70AB495255EBF6C00C62D7D /* FeatRootModule.swift */,
+				F70AB483255EBD5D00C62D7D /* FeatRoot+Injection.swift */,
 				F70AB48B255EBD7D00C62D7D /* screens */,
 			);
 			name = featRoot;
@@ -136,8 +138,6 @@
 			isa = PBXGroup;
 			children = (
 				F70AB48C255EBD8900C62D7D /* main */,
-				F70AB495255EBF6C00C62D7D /* FeatRootModule.swift */,
-				F70AB483255EBD5D00C62D7D /* FeatRoot+Injection.swift */,
 			);
 			name = screens;
 			sourceTree = "<group>";
@@ -151,6 +151,13 @@
 				F70AB4BC255EC67D00C62D7D /* MainRouter.swift */,
 			);
 			name = main;
+			sourceTree = "<group>";
+		};
+		F70AB4C4255ECEE100C62D7D /* featLogin */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = featLogin;
 			sourceTree = "<group>";
 		};
 		F7E18642255E8EDC00609B0D = {
@@ -179,6 +186,7 @@
 		F7E1864D255E8EDC00609B0D /* playground */ = {
 			isa = PBXGroup;
 			children = (
+				F70AB4C4255ECEE100C62D7D /* featLogin */,
 				F70AB482255EBD0E00C62D7D /* featRoot */,
 				F7E1864E255E8EDC00609B0D /* AppDelegate.swift */,
 				F7E18650255E8EDC00609B0D /* SceneDelegate.swift */,
