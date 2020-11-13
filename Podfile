@@ -7,6 +7,7 @@ target 'playground' do
   
   pod "Texture"
   pod "Resolver"
+  pod "PINCache", "3.0.1"
 
   # Pods for playground
 
