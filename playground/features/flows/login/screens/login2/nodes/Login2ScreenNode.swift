@@ -67,17 +67,15 @@ extension Login2ScreenNode {
 
 extension Login2ScreenNode {
     override func didLoad() {
-        homeButton.addTarget(
-            self,
-            action: #selector(homeButtonPressed),
-            forControlEvents: .touchUpInside
-        )
         
         presenter.currentUUID.map { currentUUID in
             NSAttributedString(string: currentUUID)
         }
         .bind(to: sessionNameNode.rx.attributedText, setNeedsLayout: self)
         .disposed(by: disposeBag)
+        
+        homeButton.rx.tap
+            .bind(to: presenter.goToHomeTrigger)
+            .disposed(by: disposeBag)
     }
-    @objc func homeButtonPressed() { presenter.handleHomeButtonPressed() }
 }

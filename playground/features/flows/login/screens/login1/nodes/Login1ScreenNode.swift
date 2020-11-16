@@ -33,7 +33,7 @@ class Login1ScreenNode: ASDisplayNode {
         return node
     }()
     
-    lazy var homeButton: ASButtonNode = {
+    lazy var goToLogin2Button: ASButtonNode = {
         let node = ASButtonNode()
         node.setTitle("Next", with: nil, with: .blue, for: .normal)
         node.backgroundColor = .white
@@ -52,7 +52,7 @@ extension Login1ScreenNode {
             spacing: 0,
             justifyContent: .spaceAround,
             alignItems: .center,
-            children: [pageNameNode, sessionNameNode, homeButton]
+            children: [pageNameNode, sessionNameNode, goToLogin2Button]
         )
         let bodyInsets = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
         let bodySpecWithInsets = ASInsetLayoutSpec(insets: bodyInsets, child: frontSpec)
@@ -65,18 +65,15 @@ extension Login1ScreenNode {
 
 extension Login1ScreenNode {
     override func didLoad() {
-        homeButton.addTarget(
-            self,
-            action: #selector(homeButtonPressed),
-            forControlEvents: .touchUpInside
-        )
         
         presenter.currentUUID.map { currentUUID in
             NSAttributedString(string: currentUUID)
         }
         .bind(to: sessionNameNode.rx.attributedText, setNeedsLayout: self)
         .disposed(by: disposeBag)
+        
+        goToLogin2Button.rx.tap
+            .bind(to: presenter.goToLogin2Trigger)
+            .disposed(by: disposeBag)
     }
-    
-    @objc func homeButtonPressed() { presenter.handleHomeButtonPressed() }
 }

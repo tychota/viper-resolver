@@ -66,11 +66,9 @@ extension HomeScreenNode {
 
 extension HomeScreenNode {
     override func didLoad() {
-        logoutButton.addTarget(
-            self,
-            action: #selector(logoutButtonPressed),
-            forControlEvents: .touchUpInside
-        )
+        logoutButton.rx.tap
+            .bind(to: presenter.goToLoginTrigger)
+            .disposed(by: disposeBag)
         
         presenter.currentUUID.map { currentUUID in
             NSAttributedString(string: currentUUID)
@@ -78,5 +76,4 @@ extension HomeScreenNode {
         .bind(to: sessionNameNode.rx.attributedText, setNeedsLayout: self)
         .disposed(by: disposeBag)
     }
-    @objc func logoutButtonPressed() { presenter.handleLogoutButtonPressed() }
 }
