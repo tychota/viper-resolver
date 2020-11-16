@@ -13,7 +13,7 @@ class Login1ViewController: ASViewController<ASDisplayNode>, Login1ViewControlle
     required init?(coder _: NSCoder) { fatalError("init(coder:) has not been implemented") }
     
     override func viewWillAppear(_ animated: Bool) {
-        presenter.handleViewWillAppear()
+        presenter.viewWillAppearTrigger.accept(())
     }
     
 }

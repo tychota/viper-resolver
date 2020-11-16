@@ -1,9 +1,7 @@
 import AsyncDisplayKit
 import Resolver
 
-protocol HomeViewControllerInput: class {
-    func setCurrentSession(currentSession: Session)
-}
+protocol HomeViewControllerInput: class {}
 
 class HomeViewController: ASViewController<ASDisplayNode>, HomeViewControllerInput {
     
@@ -15,12 +13,6 @@ class HomeViewController: ASViewController<ASDisplayNode>, HomeViewControllerInp
     required init?(coder _: NSCoder) { fatalError("init(coder:) has not been implemented") }
     
     override func viewWillAppear(_ animated: Bool) {
-        presenter.handleViewWillAppear()
-    }
-    
-    func setCurrentSession(currentSession: Session) {
-        if let node = self.node as? HomeScreenNode {
-            node.sessionNameNode.attributedText = NSAttributedString(string: currentSession.id.uuidString)
-        }
+        presenter.viewWillAppearTrigger.accept(())
     }
 }
