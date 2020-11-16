@@ -1,8 +1,15 @@
 import AsyncDisplayKit
 import Resolver
+import RxCocoa
+import RxSwift
+import RxCocoa_Texture
+
 
 class Login2ScreenNode: ASDisplayNode {
     @Injected var presenter: Login2PresenterOutput
+    
+    let disposeBag = DisposeBag()
+    
     lazy var bodyBackground: ASDisplayNode = {
         let node = ASDisplayNode()
         node.backgroundColor = .white
@@ -65,6 +72,12 @@ extension Login2ScreenNode {
             action: #selector(homeButtonPressed),
             forControlEvents: .touchUpInside
         )
+        
+        presenter.currentUUID.map { currentUUID in
+            NSAttributedString(string: currentUUID)
+        }
+        .bind(to: sessionNameNode.rx.attributedText, setNeedsLayout: self)
+        .disposed(by: disposeBag)
     }
     @objc func homeButtonPressed() { presenter.handleHomeButtonPressed() }
 }

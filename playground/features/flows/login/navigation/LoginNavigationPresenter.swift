@@ -16,5 +16,4 @@ class LoginNavigationPresenter: LoginNavigationPresenterInput {
 
 extension LoginNavigationPresenter: LoginNavigationPresenterOutput {
     func setWeak(viewController vc: LoginNavigationViewControllerInput) { viewController = vc }
-    func handleViewDidAppear() { router.goToLogin1() }
 }

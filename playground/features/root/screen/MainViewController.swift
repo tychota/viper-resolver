@@ -3,9 +3,9 @@ import Resolver
 
 protocol MainViewControllerInput: UIViewController {}
 
-class MainViewController: ASDKViewController<ASDisplayNode>, MainViewControllerInput {
+class MainViewController: ASViewController<ASDisplayNode>, MainViewControllerInput {
     @Injected var presenter: MainPresenterOutput
-    override init() {
+    init() {
         super.init(node: ASDisplayNode())
         view.backgroundColor = .yellow
     }

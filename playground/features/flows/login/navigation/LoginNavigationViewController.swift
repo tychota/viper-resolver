@@ -7,7 +7,7 @@ protocol LoginNavigationViewControllerInput: class {
 
 class LoginNavigationViewController: ASNavigationController {
     @Injected var presenter: LoginNavigationPresenterOutput
-    override func viewDidAppear(_ animated: Bool) { presenter.handleViewDidAppear() }
+    override func viewDidAppear(_ animated: Bool) { presenter.viewDidAppearTrigger.accept(()) }
 }
 
 extension LoginNavigationViewController: LoginNavigationViewControllerInput {
