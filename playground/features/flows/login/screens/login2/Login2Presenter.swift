@@ -29,8 +29,14 @@ class Login2Presenter: Login2PresenterInput {
     
     func reactOnViewWillAppear(){
         viewWillAppearTrigger
-            .subscribe(onNext: { [weak self] _ in
+            .flatMap { [weak self] _ -> Observable<Session?> in
                 guard let currentSession = self?.interactor.getCurrentSession() else {
+                    return Observable.just(nil)
+                }
+                return currentSession
+            }
+            .subscribe(onNext: { [weak self] currentSession in
+                guard let currentSession = currentSession else {
                     return
                 }
                 self?.currentUUID.accept(currentSession.id.uuidString)

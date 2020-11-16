@@ -1,13 +1,14 @@
 import Resolver
+import RxSwift
 
 protocol GetCurrentSessionStorage {
-    func getCurrent() -> Session?
+    func getCurrent() -> Observable<Session?>
 }
 
 final class GetCurrentSessionQuery {
     @Injected var storage: GetCurrentSessionStorage
     
-    func execute() -> Session? {
+    func execute() -> Observable<Session?> {
         storage.getCurrent()
     }
 }

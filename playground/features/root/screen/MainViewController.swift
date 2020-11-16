@@ -10,5 +10,5 @@ class MainViewController: ASViewController<ASDisplayNode>, MainViewControllerInp
         view.backgroundColor = .yellow
     }
     required init?(coder _: NSCoder) { fatalError("init(coder:) has not been implemented") }
-    override func viewDidAppear(_ animated: Bool) { presenter.handleViewDidAppear() }
+    override func viewDidAppear(_ animated: Bool) { presenter.viewDidAppearTrigger.accept(()) }
 }
