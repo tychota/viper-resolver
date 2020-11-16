@@ -3,6 +3,7 @@ import Resolver
 protocol HomePresenterOutput: class {
     func setWeak(viewController vc: HomeViewControllerInput)
     func handleLogoutButtonPressed()
+    func handleViewWillAppear()
 }
 protocol HomePresenterInput: class { var viewController: HomeViewControllerInput? { get } }
 
@@ -15,4 +16,10 @@ class HomePresenter: HomePresenterInput {
 extension HomePresenter: HomePresenterOutput {
     func setWeak(viewController vc: HomeViewControllerInput) { viewController = vc }
     func handleLogoutButtonPressed() { router.logout() }
+    func handleViewWillAppear(){
+        guard let currentSession = interactor.getCurrentSession(), let viewController = viewController else {
+            return
+        }
+        viewController.setCurrentSession(currentSession: currentSession)
+    }
 }

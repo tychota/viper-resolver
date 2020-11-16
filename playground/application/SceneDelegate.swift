@@ -4,7 +4,7 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
+    
     func scene(
         _ scene: UIScene,
         willConnectTo session: UISceneSession,
@@ -14,6 +14,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.windowScene = windowScene
 
+       let sessionController = Resolver.resolve(SessionController.self)
+        sessionController.createNewSession()
+        
         let viewController = Resolver.resolve(MainViewController.self)
         window?.rootViewController = viewController
         window?.makeKeyAndVisible()

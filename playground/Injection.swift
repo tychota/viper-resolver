@@ -5,5 +5,6 @@ extension Resolver: ResolverRegistering {
         registerFeatRoot()
         registerFeatLogin()
         registerFeatHome()
+        registerLibrarySession()
     }
 }

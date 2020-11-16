@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		0A38549F367C941B39F80C11 /* Pods_playgroundTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 285A704ECAE37E784081DE03 /* Pods_playgroundTests.framework */; };
 		3C75A5A82949401879431148 /* Pods_playground.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B30C9DA0178CE73B042AE96C /* Pods_playground.framework */; };
+		853DAA392562BAC300A99243 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853DAA382562BAC300A99243 /* Session.swift */; };
+		853DAA3F2562BB0C00A99243 /* GetCurrentSessionQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853DAA3E2562BB0C00A99243 /* GetCurrentSessionQuery.swift */; };
+		853DAA4A2562BB9100A99243 /* SessionStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853DAA492562BB9100A99243 /* SessionStorage.swift */; };
+		853DAA4F2562BC6F00A99243 /* Session+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853DAA4E2562BC6F00A99243 /* Session+Injection.swift */; };
+		853DAA542562BCB700A99243 /* CreateNewSessionCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853DAA532562BCB700A99243 /* CreateNewSessionCommand.swift */; };
+		853DAA602562BE9E00A99243 /* SessionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853DAA5F2562BE9E00A99243 /* SessionController.swift */; };
 		85FC3D23255ECFA800E2C8A7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FC3D22255ECFA800E2C8A7 /* HomeViewController.swift */; };
 		85FC3D29255ECFC900E2C8A7 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FC3D28255ECFC900E2C8A7 /* HomePresenter.swift */; };
 		85FC3D31255ECFD000E2C8A7 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FC3D30255ECFD000E2C8A7 /* HomeInteractor.swift */; };
@@ -65,6 +71,12 @@
 /* Begin PBXFileReference section */
 		0C10238B2105FBDA38E86DC9 /* Pods-playgroundTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-playgroundTests.debug.xcconfig"; path = "Target Support Files/Pods-playgroundTests/Pods-playgroundTests.debug.xcconfig"; sourceTree = "<group>"; };
 		285A704ECAE37E784081DE03 /* Pods_playgroundTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_playgroundTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		853DAA382562BAC300A99243 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		853DAA3E2562BB0C00A99243 /* GetCurrentSessionQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCurrentSessionQuery.swift; sourceTree = "<group>"; };
+		853DAA492562BB9100A99243 /* SessionStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionStorage.swift; sourceTree = "<group>"; };
+		853DAA4E2562BC6F00A99243 /* Session+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Session+Injection.swift"; sourceTree = "<group>"; };
+		853DAA532562BCB700A99243 /* CreateNewSessionCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewSessionCommand.swift; sourceTree = "<group>"; };
+		853DAA5F2562BE9E00A99243 /* SessionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionController.swift; sourceTree = "<group>"; };
 		85FC3D22255ECFA800E2C8A7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		85FC3D28255ECFC900E2C8A7 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		85FC3D30255ECFD000E2C8A7 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
@@ -149,6 +161,91 @@
 				285A704ECAE37E784081DE03 /* Pods_playgroundTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		853DAA292562B9B200A99243 /* libraries */ = {
+			isa = PBXGroup;
+			children = (
+				853DAA302562B9D600A99243 /* session */,
+			);
+			path = libraries;
+			sourceTree = "<group>";
+		};
+		853DAA302562B9D600A99243 /* session */ = {
+			isa = PBXGroup;
+			children = (
+				853DAA332562B9F500A99243 /* infrastructure */,
+				853DAA322562B9EE00A99243 /* business */,
+				853DAA312562B9E900A99243 /* domain */,
+				853DAA4E2562BC6F00A99243 /* Session+Injection.swift */,
+			);
+			path = session;
+			sourceTree = "<group>";
+		};
+		853DAA312562B9E900A99243 /* domain */ = {
+			isa = PBXGroup;
+			children = (
+				853DAA3D2562BAC600A99243 /* model */,
+			);
+			path = domain;
+			sourceTree = "<group>";
+		};
+		853DAA322562B9EE00A99243 /* business */ = {
+			isa = PBXGroup;
+			children = (
+				853DAA372562BA8D00A99243 /* query */,
+				853DAA362562BA8500A99243 /* command */,
+			);
+			path = business;
+			sourceTree = "<group>";
+		};
+		853DAA332562B9F500A99243 /* infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				853DAA352562BA4F00A99243 /* storage */,
+				853DAA342562BA4200A99243 /* controller */,
+			);
+			path = infrastructure;
+			sourceTree = "<group>";
+		};
+		853DAA342562BA4200A99243 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				853DAA5F2562BE9E00A99243 /* SessionController.swift */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		853DAA352562BA4F00A99243 /* storage */ = {
+			isa = PBXGroup;
+			children = (
+				853DAA492562BB9100A99243 /* SessionStorage.swift */,
+			);
+			path = storage;
+			sourceTree = "<group>";
+		};
+		853DAA362562BA8500A99243 /* command */ = {
+			isa = PBXGroup;
+			children = (
+				853DAA532562BCB700A99243 /* CreateNewSessionCommand.swift */,
+			);
+			path = command;
+			sourceTree = "<group>";
+		};
+		853DAA372562BA8D00A99243 /* query */ = {
+			isa = PBXGroup;
+			children = (
+				853DAA3E2562BB0C00A99243 /* GetCurrentSessionQuery.swift */,
+			);
+			path = query;
+			sourceTree = "<group>";
+		};
+		853DAA3D2562BAC600A99243 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				853DAA382562BAC300A99243 /* Session.swift */,
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 		9013D0BC8609AD800B7F0431 /* Pods */ = {
@@ -343,6 +440,7 @@
 				F70AB4A3255EC19100C62D7D /* Injection.swift */,
 				F70AB530255F006A00C62D7D /* application */,
 				F70AB531255F00FE00C62D7D /* features */,
+				853DAA292562B9B200A99243 /* libraries */,
 			);
 			path = playground;
 			sourceTree = "<group>";
@@ -608,11 +706,15 @@
 				F70AB48E255EBDAE00C62D7D /* MainViewController.swift in Sources */,
 				F7E1864F255E8EDC00609B0D /* AppDelegate.swift in Sources */,
 				F78F3256255F4CC700FEF77B /* Login2ViewController.swift in Sources */,
+				853DAA4F2562BC6F00A99243 /* Session+Injection.swift in Sources */,
 				F70AB4E1255ED0A400C62D7D /* Login1Router.swift in Sources */,
 				85FC3D36255ECFD500E2C8A7 /* HomeRouter.swift in Sources */,
+				853DAA4A2562BB9100A99243 /* SessionStorage.swift in Sources */,
 				F70AB55C255F0BB100C62D7D /* HomeScreenNode.swift in Sources */,
+				853DAA542562BCB700A99243 /* CreateNewSessionCommand.swift in Sources */,
 				F70AB4A4255EC19100C62D7D /* Injection.swift in Sources */,
 				F70AB4D2255ECFD200C62D7D /* Login1ViewController.swift in Sources */,
+				853DAA602562BE9E00A99243 /* SessionController.swift in Sources */,
 				F70AB54A255F042400C62D7D /* FeatHome+Injection.swift in Sources */,
 				F7E18651255E8EDC00609B0D /* SceneDelegate.swift in Sources */,
 				F70AB4D7255ED04500C62D7D /* Login1Presenter.swift in Sources */,
@@ -622,10 +724,12 @@
 				85FC3D29255ECFC900E2C8A7 /* HomePresenter.swift in Sources */,
 				F78F3239255F184D00FEF77B /* LoginNavigationPresenter.swift in Sources */,
 				F70AB4B8255EC66B00C62D7D /* MainInteractor.swift in Sources */,
+				853DAA392562BAC300A99243 /* Session.swift in Sources */,
 				F70AB4BD255EC67D00C62D7D /* MainRouter.swift in Sources */,
 				F78F3258255F4CC700FEF77B /* Login2Router.swift in Sources */,
 				F70AB526255EF40E00C62D7D /* Login1ScreenNode.swift in Sources */,
 				85FC3D23255ECFA800E2C8A7 /* HomeViewController.swift in Sources */,
+				853DAA3F2562BB0C00A99243 /* GetCurrentSessionQuery.swift in Sources */,
 				85FC3D31255ECFD000E2C8A7 /* HomeInteractor.swift in Sources */,
 				F78F3244255F44FE00FEF77B /* LoginNavigationInteractor.swift in Sources */,
 				F78F3255255F4CC700FEF77B /* Login2ScreenNode.swift in Sources */,

@@ -8,6 +8,7 @@ class HomeScreenNode: ASDisplayNode {
         node.backgroundColor = .white
         return node
     }()
+    
     lazy var pageNameNode: ASTextNode2 = {
         let node = ASTextNode2()
         let attributes = [
@@ -17,12 +18,24 @@ class HomeScreenNode: ASDisplayNode {
         node.backgroundColor = .white
         return node
     }()
+    
+    lazy var sessionNameNode: ASTextNode2 = {
+        let node = ASTextNode2()
+        let attributes = [
+            NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .caption1)
+        ]
+        node.attributedText = NSAttributedString(string: "session_placeholder", attributes: attributes)
+        node.backgroundColor = .white
+        return node
+    }()
+    
     lazy var logoutButton: ASButtonNode = {
         let node = ASButtonNode()
         node.setTitle("Logout", with: nil, with: .blue, for: .normal)
         node.backgroundColor = .white
         return node
     }()
+    
     override init() {
         super.init()
         automaticallyManagesSubnodes = true
@@ -36,7 +49,7 @@ extension HomeScreenNode {
             spacing: 0,
             justifyContent: .spaceAround,
             alignItems: .center,
-            children: [pageNameNode, logoutButton]
+            children: [pageNameNode, sessionNameNode, logoutButton]
         )
         let bodyInsets = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
         let bodySpecWithInsets = ASInsetLayoutSpec(insets: bodyInsets, child: frontSpec)
