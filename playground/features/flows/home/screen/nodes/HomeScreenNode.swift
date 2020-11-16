@@ -1,8 +1,12 @@
 import AsyncDisplayKit
 import Resolver
+import RxSwift
 
 class HomeScreenNode: ASDisplayNode {
     @Injected var presenter: HomePresenterOutput
+    
+    let disposeBag = DisposeBag()
+    
     lazy var bodyBackground: ASDisplayNode = {
         let node = ASDisplayNode()
         node.backgroundColor = .white
@@ -67,6 +71,12 @@ extension HomeScreenNode {
             action: #selector(logoutButtonPressed),
             forControlEvents: .touchUpInside
         )
+        
+        presenter.currentUUID.map { currentUUID in
+            NSAttributedString(string: currentUUID)
+        }
+        .bind(to: sessionNameNode.rx.attributedText, setNeedsLayout: self)
+        .disposed(by: disposeBag)
     }
     @objc func logoutButtonPressed() { presenter.handleLogoutButtonPressed() }
 }

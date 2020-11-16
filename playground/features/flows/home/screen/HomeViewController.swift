@@ -5,10 +5,10 @@ protocol HomeViewControllerInput: class {
     func setCurrentSession(currentSession: Session)
 }
 
-class HomeViewController: ASDKViewController<ASDisplayNode>, HomeViewControllerInput {
+class HomeViewController: ASViewController<ASDisplayNode>, HomeViewControllerInput {
     
     @Injected var presenter: HomePresenterOutput
-    override init() {
+    init() {
         super.init(node: HomeScreenNode())
         view.backgroundColor = .purple
     }

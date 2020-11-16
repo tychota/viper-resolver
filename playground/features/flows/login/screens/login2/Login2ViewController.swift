@@ -2,13 +2,11 @@ import AsyncDisplayKit
 import Foundation
 import Resolver
 
-protocol Login2ViewControllerInput: UIViewController {
-    func setCurrentSession(currentSession: Session)
-}
+protocol Login2ViewControllerInput: UIViewController {}
 
-class Login2ViewController: ASDKViewController<ASDisplayNode>, Login2ViewControllerInput {
+class Login2ViewController: ASViewController<ASDisplayNode>, Login2ViewControllerInput {
     @Injected var presenter: Login2PresenterOutput
-    override init() {
+    init() {
         super.init(node: Login2ScreenNode())
         view.backgroundColor = .blue
     }
@@ -18,11 +16,5 @@ class Login2ViewController: ASDKViewController<ASDisplayNode>, Login2ViewControl
         presenter.handleViewWillAppear()
     }
     
-    func setCurrentSession(currentSession: Session) {
-        if let node = self.node as? Login2ScreenNode {
-            node.sessionNameNode.attributedText = NSAttributedString(string: currentSession.id.uuidString)
-            
-        }
-    }
     
 }
