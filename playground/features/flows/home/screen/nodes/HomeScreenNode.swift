@@ -3,7 +3,7 @@ import Resolver
 import RxSwift
 
 class HomeScreenNode: ASDisplayNode {
-    @Injected var presenter: HomePresenterOutput
+    @Injected var presenter: HomePresenter
     
     let disposeBag = DisposeBag()
     

@@ -2,10 +2,8 @@ import AsyncDisplayKit
 import Foundation
 import Resolver
 
-protocol Login1ViewControllerInput: UIViewController {}
-
-class Login1ViewController: ASViewController<ASDisplayNode>, Login1ViewControllerInput {
-    @Injected var presenter: Login1PresenterOutput
+class Login1ViewController: ASViewController<ASDisplayNode> {
+    @Injected var presenter: Login1Presenter
      init() {
         super.init(node: Login1ScreenNode())
         view.backgroundColor = .blue

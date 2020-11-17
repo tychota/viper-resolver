@@ -1,15 +1,7 @@
 import Resolver
-
-protocol LoginNavigationRouterOutput: class {
-    func setWeak(presenter pres: LoginNavigationPresenterInput)
-    func goToLogin1()
-    func goToLogin2()
-}
-
-class LoginNavigationRouter { weak var presenter: LoginNavigationPresenterInput? }
-
-extension LoginNavigationRouter: LoginNavigationRouterOutput {
-    func setWeak(presenter pres: LoginNavigationPresenterInput) { presenter = pres }
+class LoginNavigationRouter {
+    weak var presenter: LoginNavigationPresenter?
+    func setWeak(presenter pres: LoginNavigationPresenter) { presenter = pres }
     func goToLogin1() {
         let viewController = Resolver.resolve(Login1ViewController.self)
         presenter?.viewController?.navigate(viewController: viewController)
