@@ -5,7 +5,7 @@ import RxRelay
 class Login2Presenter {
     @Injected var router: Login2Router
     @Injected var interactor: Login2Interactor
-    weak var viewController: Login2ViewController?
+    @LazyWeakInjected var viewController: Login2ViewController?
     
     let currentUUID = BehaviorRelay<String>(value: "")
     let viewWillAppearTrigger = PublishRelay<Void>()

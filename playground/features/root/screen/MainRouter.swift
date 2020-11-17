@@ -2,7 +2,7 @@ import Resolver
 import UIKit
 
 class MainRouter {
-    weak var presenter: MainPresenter?
+    @LazyWeakInjected var presenter: MainPresenter?
     private func present(viewController targetViewController: UIViewController) {
         targetViewController.modalPresentationStyle = .overFullScreen
         guard let rootViewController: UIViewController = presenter?.viewController else { return }

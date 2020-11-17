@@ -5,7 +5,7 @@ import RxRelay
 class LoginNavigationPresenter {
     @Injected var router: LoginNavigationRouter
     @Injected var interactor: LoginNavigationInteractor
-    weak var viewController: LoginNavigationViewController?
+    @LazyWeakInjected var viewController: LoginNavigationViewController?
     
     let viewDidAppearTrigger = PublishRelay<Void>()
     let disposeBag = DisposeBag()

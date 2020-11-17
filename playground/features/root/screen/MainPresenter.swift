@@ -5,7 +5,7 @@ import RxSwift
 class MainPresenter {
     @Injected var router: MainRouter
     @Injected var interactor: MainInteractor
-    weak var viewController: MainViewController?
+    @LazyWeakInjected var viewController: MainViewController?
     let viewDidAppearTrigger = PublishRelay<Void>()
     let disposeBag = DisposeBag()
     

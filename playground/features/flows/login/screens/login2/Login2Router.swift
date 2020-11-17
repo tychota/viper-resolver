@@ -1,10 +1,10 @@
 import Resolver
 
 class Login2Router {
-    weak var presenter: Login2Presenter!
-    func setWeak(presenter pres: Login2Presenter) { presenter = pres }
+    @LazyWeakInjected var presenter: Login2Presenter?
+
     func login() {
-        let rootRouter = Resolver.resolve(MainRouterOutput.self)
+        let rootRouter = Resolver.resolve(MainRouter.self)
         rootRouter.presentHome()
     }
 }

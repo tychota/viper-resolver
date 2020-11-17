@@ -1,7 +1,6 @@
 import Resolver
 class LoginNavigationRouter {
-    weak var presenter: LoginNavigationPresenter?
-    func setWeak(presenter pres: LoginNavigationPresenter) { presenter = pres }
+    @LazyWeakInjected var presenter: LoginNavigationPresenter?
     func goToLogin1() {
         let viewController = Resolver.resolve(Login1ViewController.self)
         presenter?.viewController?.navigate(viewController: viewController)

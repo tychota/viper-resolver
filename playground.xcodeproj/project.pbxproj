@@ -15,6 +15,8 @@
 		853DAA4F2562BC6F00A99243 /* Session+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853DAA4E2562BC6F00A99243 /* Session+Injection.swift */; };
 		853DAA542562BCB700A99243 /* CreateNewSessionCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853DAA532562BCB700A99243 /* CreateNewSessionCommand.swift */; };
 		853DAA602562BE9E00A99243 /* SessionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853DAA5F2562BE9E00A99243 /* SessionController.swift */; };
+		858A55782563D8FD00F22D5F /* Resolver+WeakInjected.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858A55772563D8FD00F22D5F /* Resolver+WeakInjected.swift */; };
+		858A55802563E69B00F22D5F /* Resolver+LazyWeakInjected.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858A557F2563E69B00F22D5F /* Resolver+LazyWeakInjected.swift */; };
 		85FC3D23255ECFA800E2C8A7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FC3D22255ECFA800E2C8A7 /* HomeViewController.swift */; };
 		85FC3D29255ECFC900E2C8A7 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FC3D28255ECFC900E2C8A7 /* HomePresenter.swift */; };
 		85FC3D31255ECFD000E2C8A7 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FC3D30255ECFD000E2C8A7 /* HomeInteractor.swift */; };
@@ -77,6 +79,8 @@
 		853DAA4E2562BC6F00A99243 /* Session+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Session+Injection.swift"; sourceTree = "<group>"; };
 		853DAA532562BCB700A99243 /* CreateNewSessionCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewSessionCommand.swift; sourceTree = "<group>"; };
 		853DAA5F2562BE9E00A99243 /* SessionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionController.swift; sourceTree = "<group>"; };
+		858A55772563D8FD00F22D5F /* Resolver+WeakInjected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Resolver+WeakInjected.swift"; sourceTree = "<group>"; };
+		858A557F2563E69B00F22D5F /* Resolver+LazyWeakInjected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Resolver+LazyWeakInjected.swift"; sourceTree = "<group>"; };
 		85FC3D22255ECFA800E2C8A7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		85FC3D28255ECFC900E2C8A7 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		85FC3D30255ECFD000E2C8A7 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
@@ -246,6 +250,15 @@
 				853DAA382562BAC300A99243 /* Session.swift */,
 			);
 			path = model;
+			sourceTree = "<group>";
+		};
+		858A55762563D8E400F22D5F /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				858A55772563D8FD00F22D5F /* Resolver+WeakInjected.swift */,
+				858A557F2563E69B00F22D5F /* Resolver+LazyWeakInjected.swift */,
+			);
+			path = extensions;
 			sourceTree = "<group>";
 		};
 		9013D0BC8609AD800B7F0431 /* Pods */ = {
@@ -439,6 +452,7 @@
 				F7E1865C255E8EDE00609B0D /* Info.plist */,
 				F70AB4A3255EC19100C62D7D /* Injection.swift */,
 				F70AB530255F006A00C62D7D /* application */,
+				858A55762563D8E400F22D5F /* extensions */,
 				F70AB531255F00FE00C62D7D /* features */,
 				853DAA292562B9B200A99243 /* libraries */,
 			);
@@ -725,7 +739,9 @@
 				F78F3239255F184D00FEF77B /* LoginNavigationPresenter.swift in Sources */,
 				F70AB4B8255EC66B00C62D7D /* MainInteractor.swift in Sources */,
 				853DAA392562BAC300A99243 /* Session.swift in Sources */,
+				858A55782563D8FD00F22D5F /* Resolver+WeakInjected.swift in Sources */,
 				F70AB4BD255EC67D00C62D7D /* MainRouter.swift in Sources */,
+				858A55802563E69B00F22D5F /* Resolver+LazyWeakInjected.swift in Sources */,
 				F78F3258255F4CC700FEF77B /* Login2Router.swift in Sources */,
 				F70AB526255EF40E00C62D7D /* Login1ScreenNode.swift in Sources */,
 				85FC3D23255ECFA800E2C8A7 /* HomeViewController.swift in Sources */,
