@@ -2,19 +2,10 @@ import Resolver
 import RxSwift
 import RxRelay
 
-protocol LoginNavigationPresenterOutput: class {
-    func setWeak(viewController vc: LoginNavigationViewControllerInput)
-    var viewDidAppearTrigger: PublishRelay<Void> { get }
-
-}
-protocol LoginNavigationPresenterInput: class {
-    var viewController: LoginNavigationViewControllerInput? { get }
-}
-
-class LoginNavigationPresenter: LoginNavigationPresenterInput {
-    @Injected var router: LoginNavigationRouterOutput
-    @Injected var interactor: LoginNavigationInteractorOutput
-    weak var viewController: LoginNavigationViewControllerInput?
+class LoginNavigationPresenter {
+    @Injected var router: LoginNavigationRouter
+    @Injected var interactor: LoginNavigationInteractor
+    weak var viewController: LoginNavigationViewController?
     
     let viewDidAppearTrigger = PublishRelay<Void>()
     let disposeBag = DisposeBag()
@@ -30,8 +21,6 @@ class LoginNavigationPresenter: LoginNavigationPresenterInput {
             })
             .disposed(by: disposeBag)
     }
-}
-
-extension LoginNavigationPresenter: LoginNavigationPresenterOutput {
-    func setWeak(viewController vc: LoginNavigationViewControllerInput) { viewController = vc }
+    
+    func setWeak(viewController vc: LoginNavigationViewController) { viewController = vc }
 }

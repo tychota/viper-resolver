@@ -1,11 +1,9 @@
 import AsyncDisplayKit
 import Resolver
 
-protocol HomeViewControllerInput: class {}
-
-class HomeViewController: ASViewController<ASDisplayNode>, HomeViewControllerInput {
+class HomeViewController: ASViewController<ASDisplayNode> {
     
-    @Injected var presenter: HomePresenterOutput
+    @Injected var presenter: HomePresenter
     init() {
         super.init(node: HomeScreenNode())
         view.backgroundColor = .purple

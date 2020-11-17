@@ -2,17 +2,10 @@ import Resolver
 import RxRelay
 import RxSwift
 
-protocol MainPresenterOutput: class {
-    func setWeak(viewController vc: MainViewControllerInput)
-    var viewDidAppearTrigger: PublishRelay<Void> { get }
-}
-
-protocol MainPresenterInput: class { var viewController: MainViewControllerInput? { get } }
-
-class MainPresenter: MainPresenterInput {
-    @Injected var router: MainRouterOutput
-    @Injected var interactor: MainInteractorOutput
-    weak var viewController: MainViewControllerInput?
+class MainPresenter {
+    @Injected var router: MainRouter
+    @Injected var interactor: MainInteractor
+    weak var viewController: MainViewController?
     let viewDidAppearTrigger = PublishRelay<Void>()
     let disposeBag = DisposeBag()
     
@@ -27,8 +20,7 @@ class MainPresenter: MainPresenterInput {
             })
             .disposed(by: disposeBag)
     }
-}
+    
+    func setWeak(viewController vc: MainViewController) { viewController = vc }
 
-extension MainPresenter: MainPresenterOutput {
-    func setWeak(viewController vc: MainViewControllerInput) { viewController = vc }
 }

@@ -2,20 +2,10 @@ import Resolver
 import RxSwift
 import RxRelay
 
-protocol Login2PresenterOutput: class {
-    func setWeak(viewController vc: Login2ViewControllerInput)
-    func handleHomeButtonPressed()
-    
-    var currentUUID: BehaviorRelay<String> { get }
-    var viewWillAppearTrigger: PublishRelay<Void> { get }
-    var goToHomeTrigger :PublishRelay<Void> { get }
-}
-protocol Login2PresenterInput: class { var viewController: Login2ViewControllerInput? { get } }
-
-class Login2Presenter: Login2PresenterInput {
-    @Injected var router: Login2RouterOutput
-    @Injected var interactor: Login2InteractorOutput
-    weak var viewController: Login2ViewControllerInput?
+class Login2Presenter {
+    @Injected var router: Login2Router
+    @Injected var interactor: Login2Interactor
+    weak var viewController: Login2ViewController?
     
     let currentUUID = BehaviorRelay<String>(value: "")
     let viewWillAppearTrigger = PublishRelay<Void>()
@@ -51,10 +41,6 @@ class Login2Presenter: Login2PresenterInput {
             })
             .disposed(by: disposeBag)
     }
-}
-
-extension Login2Presenter: Login2PresenterOutput {
-    
-    func setWeak(viewController vc: Login2ViewControllerInput) { viewController = vc }
+    func setWeak(viewController vc: Login2ViewController) { viewController = vc }
     func handleHomeButtonPressed() { router.login() }
 }

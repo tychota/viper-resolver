@@ -1,10 +1,9 @@
 import AsyncDisplayKit
 import Resolver
 
-protocol MainViewControllerInput: UIViewController {}
 
-class MainViewController: ASViewController<ASDisplayNode>, MainViewControllerInput {
-    @Injected var presenter: MainPresenterOutput
+class MainViewController: ASViewController<ASDisplayNode> {
+    @Injected var presenter: MainPresenter
     init() {
         super.init(node: ASDisplayNode())
         view.backgroundColor = .yellow

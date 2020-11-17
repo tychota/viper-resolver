@@ -3,7 +3,7 @@ import Resolver
 import RxSwift
 
 class Login1ScreenNode: ASDisplayNode {
-    @Injected var presenter: Login1PresenterOutput
+    @Injected var presenter: Login1Presenter
     
     let disposeBag = DisposeBag()
     

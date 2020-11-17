@@ -6,7 +6,7 @@ import RxCocoa_Texture
 
 
 class Login2ScreenNode: ASDisplayNode {
-    @Injected var presenter: Login2PresenterOutput
+    @Injected var presenter: Login2Presenter
     
     let disposeBag = DisposeBag()
     

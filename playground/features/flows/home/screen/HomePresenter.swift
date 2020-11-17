@@ -2,21 +2,10 @@ import Resolver
 import RxSwift
 import RxRelay
 
-protocol HomePresenterOutput: class {
-    func setWeak(viewController vc: HomeViewControllerInput)
-    func handleLogoutButtonPressed()
-    
-    var currentUUID: BehaviorRelay<String> { get }
-    var viewWillAppearTrigger: PublishRelay<Void> { get }
-    var goToLoginTrigger: PublishRelay<Void> { get }
-
-}
-protocol HomePresenterInput: class { var viewController: HomeViewControllerInput? { get } }
-
-class HomePresenter: HomePresenterInput {
-    @Injected var router: HomeRouterOutput
-    @Injected var interactor: HomeInteractorOutput
-    weak var viewController: HomeViewControllerInput?
+class HomePresenter {
+    @Injected var router: HomeRouter
+    @Injected var interactor: HomeInteractor
+    weak var viewController: HomeViewController?
     
     let currentUUID = BehaviorRelay<String>(value: "")
     let viewWillAppearTrigger = PublishRelay<Void>()
@@ -53,10 +42,6 @@ class HomePresenter: HomePresenterInput {
             })
             .disposed(by: disposeBag)
     }
-
-}
-
-extension HomePresenter: HomePresenterOutput {
-    func setWeak(viewController vc: HomeViewControllerInput) { viewController = vc }
+    func setWeak(viewController vc: HomeViewController) { viewController = vc }
     func handleLogoutButtonPressed() { router.logout() }
 }
